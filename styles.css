@@ -72,62 +72,60 @@
   --social-shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.24);
   --social-ink: var(--ink);
 }
-body.template-personal-brand-gradient-finance {
+body.template-personal-brand-builder-spectrum {
 
   color-scheme: light;
-  --accent: #533afd;
+  --accent: #7a3dff;
   --action-bg: #ffffff;
-  --action-border: #e3e8ee;
-  --ambient: linear-gradient(115deg, rgba(83, 58, 253, 0.22), rgba(249, 107, 238, 0.18) 42%, transparent 42% 100%);
-  --avatar-size: 108px;
-  --bio-ink: #506176;
-  --canvas: #f6f9fc;
-  --card-bg: rgba(255, 255, 255, 0.82);
-  --card-border: #e3e8ee;
-  --card-shadow: rgba(13, 37, 61, 0.12) 0 26px 70px;
-  --cta-bg: #533afd;
-  --cta-bg-hover: #674eff;
-  --cta-border: #533afd;
+  --action-border: #d8d8d8;
+  --ambient: linear-gradient(90deg, #7a3dff 0 5px, transparent 5px), linear-gradient(180deg, #ffffff, #f7f7f7);
+  --avatar-size: 104px;
+  --bio-ink: #363636;
+  --canvas: #ffffff;
+  --card-bg: #ffffff;
+  --card-border: #d8d8d8;
+  --card-shadow: rgba(8, 8, 8, 0.1) 0 24px 60px;
+  --cta-bg: #080808;
+  --cta-bg-hover: #222222;
+  --cta-border: #080808;
   --cta-ink: #ffffff;
-  --headline-size: 66px;
-  --headline-size-mobile: 40px;
-  --headline-weight: 420;
-  --ink: #0d253d;
+  --headline-size: 64px;
+  --headline-size-mobile: 38px;
+  --headline-weight: 600;
+  --ink: #080808;
   --link-bg: #ffffff;
-  --link-bg-hover: #f1f5fb;
-  --link-border: #e3e8ee;
-  --link-gap: 10px;
-  --link-icon-bg: #eef3ff;
-  --link-icon-bg-hover: #533afd;
+  --link-bg-hover: #f7f7f7;
+  --link-border: #d8d8d8;
+  --link-gap: 9px;
+  --link-icon-bg: #f2ebff;
+  --link-icon-bg-hover: #7a3dff;
   --link-icon-ink-hover: #ffffff;
-  --link-meta: #64748d;
-  --link-shadow-hover: 0 16px 38px rgba(83, 58, 253, 0.16);
-  --meta-bg: rgba(255, 255, 255, 0.78);
-  --meta-border: #d9e1ec;
-  --muted: #64748d;
-  --panel-bg: rgba(255, 255, 255, 0.82);
-  --panel-border: #e3e8ee;
-  --panel-padding: 20px;
-  --profile-align: start;
+  --link-meta: #5a5a5a;
+  --link-shadow-hover: 0 16px 34px rgba(122, 61, 255, 0.15);
+  --meta-bg: #f7f7f7;
+  --meta-border: #d8d8d8;
+  --muted: #5a5a5a;
+  --panel-bg: #ffffff;
+  --panel-border: #d8d8d8;
+  --panel-padding: 18px;
   --profile-bg: transparent;
   --profile-border: transparent;
-  --profile-padding: 18px 0;
-  --profile-text-align: left;
-  --radius-action: 999px;
-  --radius-avatar: 18px;
-  --radius-card: 14px;
-  --radius-panel: 24px;
-  --section-gap: 18px;
-  --shell-padding-block: 58px 34px;
-  --shell-width: 920px;
-  --surface: #ffffff;
+  --profile-padding: 8px 0 12px;
+  --radius-action: 4px;
+  --radius-avatar: 4px;
+  --radius-card: 8px;
+  --radius-panel: 12px;
+  --section-gap: 14px;
+  --shell-padding-block: 46px 34px;
+  --shell-width: 820px;
+  --surface: #f7f7f7;
   --social-bg: #ffffff;
-  --social-border: #e3e8ee;
-  --social-hover-bg: #533afd;
-  --social-hover-border: #533afd;
+  --social-border: #d8d8d8;
+  --social-hover-bg: #7a3dff;
+  --social-hover-border: #7a3dff;
   --social-hover-ink: #ffffff;
-  --social-ink: #0d253d;
-  --surface-2: #eef3f8;
+  --social-ink: #080808;
+  --surface-2: #f2ebff;
   --cta-ink-hover: var(--cta-ink);
   --cta-icon-bg: color-mix(in srgb, var(--cta-ink), transparent 86%);
   --cta-icon-border: color-mix(in srgb, var(--cta-ink), transparent 72%);
@@ -309,12 +307,19 @@ footer span,
 }
 h1 {
   font-family: var(--display-font);
-  font-size: var(--headline-size);
+  font-size: min(var(--headline-size), 44px);
   font-weight: var(--headline-weight);
   letter-spacing: 0;
-  line-height: 1.02;
+  line-height: 1.08;
   margin: 0;
   overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+h1.headline-medium {
+  font-size: min(var(--headline-size), 40px);
+}
+h1.headline-long {
+  font-size: min(var(--headline-size), 34px);
 }
 .bio {
   color: var(--bio-ink, #d0d6e0);
@@ -842,7 +847,14 @@ footer a:hover {
     width: min(calc(100% - 24px), var(--shell-width));
   }
   h1 {
-    font-size: var(--headline-size-mobile);
+    font-size: min(var(--headline-size-mobile), 30px);
+    line-height: 1.1;
+  }
+  h1.headline-medium {
+    font-size: min(var(--headline-size-mobile), 28px);
+  }
+  h1.headline-long {
+    font-size: min(var(--headline-size-mobile), 25px);
   }
   .profile-card {
     padding: max(18px, calc(var(--card-padding) - 8px));
